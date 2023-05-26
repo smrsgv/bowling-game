@@ -4,13 +4,7 @@
     {
         private int _score;
 
-        public int Score
-        {
-            get
-            {
-                return _score;
-            }
-        }
+        public int Score => _score;
 
         public void Add(int pins)
         {

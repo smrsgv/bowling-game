@@ -2,18 +2,15 @@
 {
     public class Game
     {
-        private int currentFrame = 0;
-        private bool isFirstThrow = true;
-        private Scorer scorer = new Scorer();
+        private int _currentFrame = 0;
+        private bool _isFirstThrow = true;
+        private Scorer _scorer = new();
 
-        public int Score
-        {
-            get { return ScoreForFrame(currentFrame); }
-        }
+        public int Score => ScoreForFrame(_currentFrame);
 
         public void Add(int pins)
         {
-            scorer.AddThrow(pins);
+            _scorer.AddThrow(pins);
             AdjustCurrentFrame(pins);
         }
 
@@ -22,29 +19,29 @@
             if (LastBallInFrame(pins))
                 AdvanceFrame();
             else
-                isFirstThrow = false;
+                _isFirstThrow = false;
         }
 
         private bool LastBallInFrame(int pins)
         {
-            return Strike(pins) || (!isFirstThrow);
+            return Strike(pins) || (!_isFirstThrow);
         }
 
         private bool Strike(int pins)
         {
-            return (isFirstThrow && pins == 10);
+            return _isFirstThrow && pins == 10;
         }
 
         private void AdvanceFrame()
         {
-            currentFrame++;
-            if(currentFrame > 10)
-                currentFrame = 10;
+            _currentFrame++;
+            if(_currentFrame > 10)
+                _currentFrame = 10;
         }
 
         public int ScoreForFrame(int theFrame)
         {
-            return scorer.ScoreForFrame(theFrame);
+            return _scorer.ScoreForFrame(theFrame);
         }
     }
 
