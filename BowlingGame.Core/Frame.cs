@@ -2,16 +2,19 @@
 {
     public class Frame
     {
+        private int _score;
+
         public int Score
         {
             get
             {
-                return 0;
+                return _score;
             }
-            set
-            {
+        }
 
-            }
+        public void Add(int pins)
+        {
+            _score += pins;
         }
     }
 }
