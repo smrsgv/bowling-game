@@ -3,8 +3,6 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.5.33627.172
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BowlingGame.ConsoleUI", "BowlingGame.ConsoleUI\BowlingGame.ConsoleUI.csproj", "{AC62759E-033D-43C8-9B30-47CA0C8C53C6}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BowlingGame.Tests", "BowlingGame.Tests\BowlingGame.Tests.csproj", "{8D18033A-3903-4744-BA3E-575C85A88768}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BowlingGame.Core", "BowlingGame.Core\BowlingGame.Core.csproj", "{5E8AB45E-FBF2-4F24-82CB-4FD3514106C3}"
@@ -15,10 +13,6 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{AC62759E-033D-43C8-9B30-47CA0C8C53C6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{AC62759E-033D-43C8-9B30-47CA0C8C53C6}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{AC62759E-033D-43C8-9B30-47CA0C8C53C6}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{AC62759E-033D-43C8-9B30-47CA0C8C53C6}.Release|Any CPU.Build.0 = Release|Any CPU
 		{8D18033A-3903-4744-BA3E-575C85A88768}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{8D18033A-3903-4744-BA3E-575C85A88768}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8D18033A-3903-4744-BA3E-575C85A88768}.Release|Any CPU.ActiveCfg = Release|Any CPU
