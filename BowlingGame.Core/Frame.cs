@@ -1,14 +1,11 @@
-﻿namespace BowlingGame.Core
+﻿namespace BowlingGame.Core;
+
+public class Frame
 {
-    public class Frame
+    public int Score { get; private set; }
+
+    public void Add(int pins)
     {
-        private int _score;
-
-        public int Score => _score;
-
-        public void Add(int pins)
-        {
-            _score += pins;
-        }
+        Score += pins;
     }
 }

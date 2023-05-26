@@ -1,26 +1,24 @@
 ﻿using BowlingGame.Core;
-using Xunit;
 
-namespace BowlingGame.Tests
+namespace BowlingGame.Tests;
+
+public class FrameTest
 {
-    public class FrameTest
+    [Fact]
+    public void TestScoreNoThrows()
     {
-        [Fact]
-        public void TestScoreNoThrows()
-        {
-            var frame = new Frame();
+        var frame = new Frame();
 
-            Assert.Equal(0, frame.Score);
-        }
+        Assert.Equal(0, frame.Score);
+    }
 
-        [Fact]
-        public void TestAddOneThrow()
-        {
-            var frame = new Frame();
-            
-            frame.Add(5);
+    [Fact]
+    public void TestAddOneThrow()
+    {
+        var frame = new Frame();
 
-            Assert.Equal(5, frame.Score);
-        }
+        frame.Add(5);
+
+        Assert.Equal(5, frame.Score);
     }
 }

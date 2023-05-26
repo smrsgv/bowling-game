@@ -4,7 +4,7 @@ namespace BowlingGame.Tests;
 
 public class GameTest
 {
-    private Game _game;
+    private readonly Game _game;
 
     public GameTest()
     {
@@ -65,10 +65,7 @@ public class GameTest
     [Fact]
     public void FactPerfect_game()
     {
-        for (int i = 0; i < 12; i++)
-        {
-            _game.Add(10);
-        }
+        for (var i = 0; i < 12; i++) _game.Add(10);
 
         Assert.Equal(300, _game.Score);
     }
@@ -76,7 +73,7 @@ public class GameTest
     [Fact]
     public void FactEndOfArray()
     {
-        for (int i = 0; i < 9; i++)
+        for (var i = 0; i < 9; i++)
         {
             _game.Add(0);
             _game.Add(0);
@@ -116,7 +113,7 @@ public class GameTest
     [Fact]
     public void FactHeartBreak()
     {
-        for (int i = 0; i < 11; i++)
+        for (var i = 0; i < 11; i++)
             _game.Add(10);
         _game.Add(9);
         Assert.Equal(299, _game.Score);
@@ -126,7 +123,7 @@ public class GameTest
     public void FactTenthFrameSpare()
 
     {
-        for (int i = 0; i < 9; i++)
+        for (var i = 0; i < 9; i++)
             _game.Add(10);
         _game.Add(9);
         _game.Add(1);
